@@ -10,10 +10,12 @@
         echo $this->Html->css('bootstrap.min');
     ?>
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"> -->
     <!-- Ionicons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"> -->
     <?php
+        echo $this->Html->css('font-awesome.min');
+        echo $this->Html->css('ionicons.min');
         echo $this->Html->css('AdminLTE.min');
         echo $this->Html->css('_all-skins.min');
     ?>
@@ -225,9 +227,18 @@
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               </a>
             </li>
-
-
-
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-user-secret"></i> <span>Admins</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?php echo $this->Html->url(array('controller' => 'admins', 'action' => 'add')); ?>"><i class="fa fa-circle-o"></i> Add Admin</a></li>
+                    <li><a href="<?php echo $this->Html->url(array('controller' => 'admins', 'action' => 'view')); ?>"><i class="fa fa-circle-o"></i> View Admins</a></li>
+                </ul>
+            </li>
             <!-- <li><a href="../../documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li> -->
             <!-- <li class="header">LABELS</li> -->
             <!-- <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li> -->

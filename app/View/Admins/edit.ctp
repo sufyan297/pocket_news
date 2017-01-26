@@ -1,7 +1,7 @@
 <?php $this->start('main-content'); ?>
 
 <section class="content-header">
-      <h1>Add Admin<small>Admins</small></h1>
+      <h1>Edit Admin<small>Admins</small></h1>
 </section>
 
 <section class="content">
@@ -13,7 +13,7 @@
 		<div class="col-md-6">
 			<div class="box box-primary">
 				<div class="box-header with-border">
-	            <h3 class="box-title">Add Admin</h3>
+	            <h3 class="box-title">Edit Admin</h3>
 
 		            <div class="box-tools pull-right">
 		                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -23,19 +23,20 @@
 	            </div>
 	            <!-- /.box-header -->
 	            <!-- form start -->
-				<?php echo $this->Form->create('Admin',array('class'=>'form-signin')); ?>
+				<?php echo $this->Form->create('Admin',array('class'=>'form-group')); ?>
 	              <div class="box-body">
   					<?php
   						// echo $this->Session->flash('auth');
   						echo $this->Session->flash();
   					?>
 						<div class="form-group">
-						  <label for="inputFirstName">First Name</label>
+						  <label for="inputFirstName">First tName</label>
 						  <?php echo $this->Form->input('fname',array(
 							'class'=>"form-control",
 							'placeholder'=>'First Name',
 							'label'=>false,
 							'required' => 'required',
+                            'value'=>$admin['Admin']['fname'],
 							'autofocus' => 'autofocus'
 						  ));
 						  ?>
@@ -47,6 +48,7 @@
 							'placeholder'=>'Last Name',
 							'label'=>false,
 							'required' => 'required',
+                            'value'=>$admin['Admin']['lname'],
 							'autofocus' => 'autofocus'
 						  ));
 						  ?>
@@ -57,7 +59,9 @@
 						    'class'=>"form-control",
 						    'placeholder'=>'Username',
 						    'label'=>false,
+                            'disabled'=>'disabled',
 						    'required' => 'required',
+                            'value'=>$admin['Admin']['username'],
 						    'autofocus' => 'autofocus'
 						  ));
 						  ?>
@@ -68,7 +72,6 @@
 								  'placeholder'=>'Password',
 								  'class'=>'form-control',
 								  'label'=>false,
-								  'required' => 'required'
 							  ));
 							  ?>
 						</div>
@@ -79,7 +82,6 @@
 								  'type'=>'password',
 								  'class'=>'form-control',
 								  'label'=>false,
-								  'required' => 'required'
 							  ));
 							  ?>
 						</div>
@@ -88,7 +90,7 @@
 
 		            <div class="box-footer">
 						<?php
-							echo $this->Form->input('Add Admin',array('class'=>'btn btn-primary pull-right','type'=>'submit','label'=>false));
+							echo $this->Form->input('Edit Admin',array('class'=>'btn btn-primary pull-right','type'=>'submit','label'=>false));
 						?>
 		            </div>
 				  	<?php echo $this->Form->end(); ?>
