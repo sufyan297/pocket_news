@@ -15,7 +15,6 @@ class AdminsController extends AppController
         $this->Auth->authenticate = array(
           'Form' => array('userModel' => 'Admin')
         );
-        date_default_timezone_set("Asia/Kolkata");
         $this->Auth->allow('login'); //Without Logged IN which page can be access.. assign here
     }
 
