@@ -19,6 +19,7 @@
         echo $this->Html->css('AdminLTE.min');
         echo $this->Html->css('_all-skins.min');
     ?>
+    <?php echo $scripts_for_layout; ?>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
@@ -253,6 +254,18 @@
                 </ul>
             </li>
 
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-newspaper-o"></i> <span>News</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="<?php echo $this->Html->url(array('controller' => 'news', 'action' => 'add')); ?>"><i class="fa fa-circle-o"></i> Add News</a></li>
+                    <li><a href="<?php echo $this->Html->url(array('controller' => 'news', 'action' => 'view')); ?>"><i class="fa fa-circle-o"></i> View News</a></li>
+                </ul>
+            </li>
             <!-- <li><a href="../../documentation/index.html"><i class="fa fa-book"></i> <span>Documentation</span></a></li> -->
             <!-- <li class="header">LABELS</li> -->
             <!-- <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li> -->

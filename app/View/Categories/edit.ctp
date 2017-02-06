@@ -81,7 +81,7 @@
 
 		            <div class="box-footer">
 						<?php
-							echo $this->Form->input('Add Category',array('class'=>'btn btn-primary pull-right','type'=>'submit','label'=>false));
+							echo $this->Form->input('Edit Category',array('class'=>'btn btn-primary pull-right','type'=>'submit','label'=>false));
 						?>
 		            </div>
 				  	<?php echo $this->Form->end(); ?>

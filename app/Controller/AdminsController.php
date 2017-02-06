@@ -5,7 +5,7 @@ App::uses('AppController', 'Controller');
 class AdminsController extends AppController
 {
     public $components = array('Paginator');
-    // public $uses = array('Admin');
+    public $uses = array('Admin','Category','News');
 
     public function beforeFilter()
     {
@@ -49,9 +49,12 @@ class AdminsController extends AppController
         $admins_count = $this->Admin->find('count');
         $this->set('admins_count' , $admins_count);
         //
-        // //Events Count
-        // $events_count = $this->Event->find('count');
-        // $this->set('events_count' , $events_count);
+        //Categories Count
+        $category_count = $this->Category->find('count');
+        $this->set('categories_count' , $category_count);
+        //News Count
+        $news_count = $this->News->find('count');
+        $this->set('news_count' , $news_count);
     }
     public function add()
     {
