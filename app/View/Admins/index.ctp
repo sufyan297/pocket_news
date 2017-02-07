@@ -39,7 +39,7 @@
               <div class="icon">
                   <i class="fa fa-tags"></i>
               </div>
-              <a href="<?= $this->webroot. 'events/view'; ?>" class="small-box-footer">
+              <a href="<?= $this->webroot. 'categories/view'; ?>" class="small-box-footer">
                 More info <i class="fa fa-arrow-circle-right"></i>
               </a>
           </div>
@@ -58,7 +58,7 @@
               <div class="icon">
                   <i class="fa fa-newspaper-o"></i>
               </div>
-              <a href="<?= $this->webroot. 'events/view'; ?>" class="small-box-footer">
+              <a href="<?= $this->webroot. 'news/view'; ?>" class="small-box-footer">
                 More info <i class="fa fa-arrow-circle-right"></i>
               </a>
           </div>

@@ -67,6 +67,8 @@ class AppController extends Controller {
             exit(0);
         }
 
+        //global vars
+        $this->IMAGE_BASE_URL = "http://sirajbhana.com/news/files/";
 
         $this->Auth->allow("logout","login");
       }
