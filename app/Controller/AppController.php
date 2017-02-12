@@ -70,6 +70,12 @@ class AppController extends Controller {
         //global vars
         $this->IMAGE_BASE_URL = "http://sirajbhana.com/news/files/";
 
+        //Constants
+        $this->SMALL_IMG = "sm_";
+        $this->THUMB_IMG = "tm_";
+        $this->API_IMG = "api_";
+
+
         $this->Auth->allow("logout","login");
       }
 }

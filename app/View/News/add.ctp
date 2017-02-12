@@ -55,8 +55,9 @@
 						  ?>
 						</div>
                         <div class="form-group">
+                            <!-- 'class'=>'ckeditor' -->
                             <label for="inputDescription">Description</label>
-                            <?php echo $this->Form->textarea('description', array('class'=>'ckeditor')); ?>
+                            <?php echo $this->Form->textarea('description', array('class'=>'form-control','rows'=>15)); ?>
                         </div>
 	            	</div>
 	              <!-- /.box-body -->

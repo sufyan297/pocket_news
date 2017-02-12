@@ -71,7 +71,8 @@
 						</div>
                         <div class="form-group">
                             <label for="inputDescription">Description</label>
-                            <?php echo $this->Form->textarea('description', array('class'=>'ckeditor','value'=>$news['News']['description'])); ?>
+                            <!-- 'class'=>'ckeditor', -->
+                            <?php echo $this->Form->textarea('description', array('class'=>'form-control','rows'=>15,'value'=>$news['News']['description'])); ?>
                         </div>
 	            	</div>
 	              <!-- /.box-body -->
